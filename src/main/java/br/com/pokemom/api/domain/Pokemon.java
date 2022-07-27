@@ -27,13 +27,13 @@ public class Pokemon {
     @Column(name = "is_starter")
     private Boolean isStarter;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     private List<Move> moves;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     private List<Abilities> abilities;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     private List<Sprite> sprites;
 
 }

@@ -3,11 +3,11 @@ services:
   database:
     image: "postgres:latest"
     ports:
-      - 5432:5432
+      - 5433:5432  #the default port for postgres is 5432
     environment:
-      POSTGRES_USER: pokemon_api_adm
+      POSTGRES_USER: pokemonapiadm
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: pokemon_api_adm
+      POSTGRES_DB: pokemonapiadmdb
     volumes:
       - db_volume:/var/lib/postgresql/data
 volumes:
