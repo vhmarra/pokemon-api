@@ -1,0 +1,15 @@
+version: "3"
+services:
+  database:
+    image: "postgres:latest"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: pokemon_api_adm
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pokemon_api_adm
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+volumes:
+  db_volume:
+    external: true
